@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import data from "../Json/class.json"
 import { useParams, useHistory } from "react-router-dom"
 import { AuthContext } from "../Context/ContextProvider"
+import style from "./style/style.module.css"
 
 function Subjects(props) {
     const params = useParams()
@@ -28,7 +29,7 @@ function Subjects(props) {
             <div style={{ width: "50%", paddingTop: "10%" }}>
                 <h4>Class {params.classId}</h4>
                 <h2>{subject.name}</h2>
-                <button onClick={() => handleClick()}>Parma Link</button>
+                <button className={style.parma} onClick={() => handleClick()}>Parma Link</button>
             </div>
         </div>
     )

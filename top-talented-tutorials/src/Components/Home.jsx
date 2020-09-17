@@ -48,7 +48,7 @@ export default function Home() {
                 <div style={{ width: "25%" }}>
                 <img className={style.teach} src="https://www.masaischool.com/static/team/aman.jpg" alt="3" />
                 <h1>Aman</h1>
-                <small>(Mathematics)</small>
+                <small>(Mathematics) </small>
                 </div>
             </div>
         </div >

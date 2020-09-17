@@ -270,3 +270,13 @@
     border-radius: 5px;
     padding: 5px 10px;
 }
+
+.parma{
+    color: white;
+    background: teal;
+    font-weight: bolder;
+    border: 1px solid teal;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 20px;
+}

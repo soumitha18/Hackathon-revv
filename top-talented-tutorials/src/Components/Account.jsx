@@ -3,7 +3,7 @@ import { AuthContext } from '../Context/ContextProvider';
 import style from './style/style.module.css';
 import styles from './Account.module.css';
 import axios from 'axios';
-​
+
 function Account() {
 	const context = useContext(AuthContext);
 	const { login, loginUser, registration } = context;
@@ -16,7 +16,7 @@ function Account() {
 	const [ Num, setNum ] = useState(1);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const [ isError, setIsError ] = useState(false);
-​
+
 	const loginApi = async () => {
 		let accessToken;
 		await axios({
@@ -37,10 +37,10 @@ function Account() {
 				return res.data.User.access_token;
 			})
 			.catch((err) => (accessToken = false));
-​
+
 		return accessToken;
 	};
-​
+
 	// CREATE OPPORTUNITY API
 	const opportunityApi = async () => {
 		setIsLoading(true);
@@ -75,7 +75,7 @@ function Account() {
 				setIsError(true);
 			});
 	};
-​
+
 	// CREATE CONTACT API
 	const contactApi = async () => {
 		setIsLoading(true);
@@ -114,7 +114,7 @@ function Account() {
 				setIsError(true);
 			});
 	};
-​
+
 	const sharePrivatelyApi = async () => {
 		await axios({
 			method: 'post',
@@ -140,7 +140,7 @@ function Account() {
 			})
 			.catch((err) => console.log(err));
 	};
-​
+
 	const handleRegister = () => {
 		sharePrivatelyApi();
 		const obj = {
@@ -151,7 +151,7 @@ function Account() {
 		};
 		registration(obj);
 	};
-​
+
 	const handleRequest = () => {
 		const obj = {
 			name,
@@ -160,17 +160,17 @@ function Account() {
 		};
 		console.log(obj);
 	};
-​
+
 	return login ? (
 		<div style={{ marginTop: '5%' }}>
 			<div className={style.account}>
-				<div style={{ width: '30%' }}>
-					<img src="https://via.placeholder.com/200x200" alt="user" style={{ borderRadius: '100px' }} />
+				<div style={{ width: '60%' }}>
+					<img src="https://as2.ftcdn.net/jpg/02/22/15/15/500_F_222151558_NspEWsIlcoF85J4JtLqvp6atAPwO7mhK.jpg" alt="user" style={{ borderRadius: '50%' }} />
 				</div>
-				<div style={{ width: '60%', marginLeft: '10%', paddingTop: '3%' }}>
+				<div style={{ width: '30%', marginLeft: '10%', paddingTop: '7%' }}>
 					<h1>{loginUser.name}</h1>
-					<h5>{loginUser.email}</h5>
-					<h5>{loginUser.mobile}</h5>
+					<h1>{loginUser.email}</h1>
+					<h1>{loginUser.mobile}</h1>
 				</div>
 			</div>
 		</div>
@@ -271,5 +271,5 @@ function Account() {
 		</div>
 	);
 }
-​
+
 export default Account;

@@ -1,0 +1,45 @@
+.actions {
+	padding: 100px;
+	background: linear-gradient(#ed213a, #93291e);
+	max-width: 100%;
+	margin-top: 100px;
+}
+
+.actions > h1 {
+	color: white;
+}
+
+.actions > button {
+	padding: 10px;
+	width: 200px;
+	border: none;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+
+.requestCallForm {
+	display: flex;
+	flex-direction: row;
+	color: white;
+	justify-content: center;
+	align-items: center;
+}
+
+.requestCallForm > label {
+	margin: 20px;
+	font-size: 20px;
+}
+
+.requestCallForm > label > input,
+button,
+select {
+	width: 120px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: white;
+}
+
+button {
+	cursor: pointer;
+}

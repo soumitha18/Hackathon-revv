@@ -4,6 +4,7 @@ import Home from "../Home"
 import Subjects from "../Subjects"
 import ClassNotes from "../ClassNotes"
 import Account from "../Account"
+import Teachers from "../Teacher"
 
 function Routes() {
     return (
@@ -13,6 +14,7 @@ function Routes() {
                 <Route path="/classnotes" exact component={ClassNotes} />
                 <Route path="/classnotes/:classId/:subjectId" component={Subjects} />
                 <Route path="/account" component={Account} />
+                <Route path="/teachers" component={Teachers} />
             </Switch>
         </div>
     )

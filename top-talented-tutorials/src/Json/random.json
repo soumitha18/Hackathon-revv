@@ -3,30 +3,30 @@
         "id" : 1,
         "subjectId" : 2,
         "name" : "Maths",
-        "avatar" : ""
+        "avatar" : "/resources/math.png"
     },
     {
         "id" : 2,
         "subjectId" : 1,
         "name" : "English",
-        "avatar" : ""
+        "avatar" : "/resources/english.png"
     },
     {
         "id" : 5,
         "subjectId" : 1,
         "name" : "English",
-        "avatar" : ""
+        "avatar" : "/resources/english.png"
     },
     {
         "id" : 4,
         "subjectId" : 2,
         "name" : "Maths",
-        "avatar" : ""
+        "avatar" : "/resources/math.png"
     },
     {
         "id" : 3,
         "subjectId" : 1,
         "name" : "English",
-        "avatar" : ""
+        "avatar" : "/resources/english.png"
     }
 ]

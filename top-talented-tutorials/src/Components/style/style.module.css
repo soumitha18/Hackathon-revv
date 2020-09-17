@@ -104,17 +104,6 @@
     margin-right: 3%;
 }
 
-.text{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    text-align: center;
-    transform: skewY(-10deg);
-    color: white;
-    font-size: 60px;
-    font-weight: bolder;
-}
-
 .store {
     padding:2%;
 }
@@ -261,4 +250,23 @@
     border-radius: 5px; 
     display: flex ;
     flex-direction: row
+}
+
+.teacher{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.teach{
+    width: 150px;
+}
+
+.calendly {
+    color:white ;
+    background: linear-gradient(#ed213a, #93291e);
+    font-weight: bolder;
+    border: 1px solid #93291e;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
 }

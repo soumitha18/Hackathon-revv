@@ -7,7 +7,7 @@ export default function Home() {
         <React.Fragment>
             <div className={style.nav}>
                 <div>
-                    <Link to="/" style={{fontWeight:"bolder", fontSize:"20px"}}>Top Talented Tutorials</Link>
+                    <Link to="/" style={{fontWeight:"bolder", fontSize:"20px"}}>Top <b style={{fontSize:"30px", color:"teal"}}>Talented</b> Tutorials</Link>
                 </div>
                 <div>
                     <Link to="/teachers" >TEACHERS</Link>

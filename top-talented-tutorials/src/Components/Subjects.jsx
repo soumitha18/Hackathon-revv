@@ -23,7 +23,7 @@ function Subjects(props) {
     return (
         <div style={{ width: "50%", marginLeft: "25%", display: "flex", flexDirection: "row", marginTop: "5%", textAlign: "center" }}>
             <div style={{ width: "50%" }}>
-                <img src="https://via.placeholder.com/400" alt="1" />
+                <img src={subject.avatar} width="100%" alt="1" />
             </div>
             <div style={{ width: "50%", paddingTop: "10%" }}>
                 <h4>Class {params.classId}</h4>

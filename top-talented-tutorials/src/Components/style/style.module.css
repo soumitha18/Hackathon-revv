@@ -12,18 +12,12 @@
 }
 
 .nav > div:nth-child(1){
-    width: 10%;
     text-align: left;
-    margin-left:1%;
-    padding-top: 0.5%;
-}
-
-.nav > div:nth-child(2){
     width: 60%;
 }
 
-.nav > div:nth-child(3){
-    width: 30%;
+.nav > div:nth-child(2){
+    width: 40%;
     text-align: right;
     margin-right: 2%;
 }

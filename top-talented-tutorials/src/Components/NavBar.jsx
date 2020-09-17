@@ -7,15 +7,11 @@ export default function Home() {
         <React.Fragment>
             <div className={style.nav}>
                 <div>
-                   
-                </div>
-                <div>
-                    <Link to="/" style={{ marginLeft: "37%" }} ><img src="https://cdn.allbirds.com/image/upload/v1571355713/icons/allbirds-logo.svg" alt="logo" width="100px" /></Link>
+                    <Link to="/" style={{fontWeight:"bolder", fontSize:"20px"}}>Top Talented Tutorials</Link>
                 </div>
                 <div>
                     <Link to="/teachers" >TEACHERS</Link>
-                    {/* <Link to="/memes" >MEMES</Link> */}
-                    <Link to="/classnotes" >Class Notes</Link>
+                    <Link to="/classnotes" >CLASS NOTES</Link>
                     <Link to="/account" ><img src="https://cdn.allbirds.com/image/upload/v1571355713/icons/user.svg" alt="user" width="" /></Link>
                     <Link to="/faq" ><img src="https://cdn.allbirds.com/image/upload/v1571947807/icons/help.svg" alt="help" width="" /></Link>
                 </div>

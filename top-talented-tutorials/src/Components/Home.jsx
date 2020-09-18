@@ -14,13 +14,13 @@ export default function Home() {
 			</div>
 			<div className={style.image1} />
 			<div style={{ background: 'whitesmoke', padding: '2%', marginTop: '2%' }}>
-				<h1>What is Top Talented Tutorial ?</h1>
+				<h1>What is Top Talented Tutorials (T3) ?</h1>
 				<p>
-					TTT is an intensive programme of tuitions designed to stretch and challenge the very best of its
-					student's overall academic development
+					T3 is an intensive programme of tuition services designed to stretch and challenge the very best of
+					its student's overall academic development
 				</p>
 			</div>
-			<h2 style={{ marginTop: '2%' }}>TTT Classes Notes are here</h2>
+			<h2 style={{ marginTop: '2%' }}>T3 Classes Notes are here</h2>
 			<div style={{ display: 'flex', flexDirection: 'row', marginTop: '3%' }}>
 				{data &&
 					data.map((item) => (
@@ -42,10 +42,10 @@ export default function Home() {
 					))}
 			</div>
 			<div style={{ background: 'whitesmoke', padding: '2%', marginTop: '2%' }}>
-				<h1>Why we started TTT?</h1>
+				<h1>Why we started T3?</h1>
 				<p>
-					TTT is an intensive programme of tuitions designed to stretch and challenge the very best of its
-					student's overall academic development
+					T3 is an intensive programme of tuition services designed to stretch and challenge the very best of
+					its student's overall academic development
 				</p>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'row', width: '70%', marginLeft: '15%', marginTop: '2%' }}>

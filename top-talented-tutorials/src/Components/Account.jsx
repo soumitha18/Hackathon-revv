@@ -3,11 +3,11 @@ import { AuthContext } from '../Context/ContextProvider';
 import style from './style/style.module.css';
 import styles from './Account.module.css';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function Account() {
 	const context = useContext(AuthContext);
 	const { login, loginUser, registration } = context;
-	console.log(loginUser);
 	const [ request, setRequest ] = useState(false);
 	const [ payment, setPayment ] = useState(false);
 	const [ name, setName ] = useState('');
@@ -16,6 +16,7 @@ function Account() {
 	const [ Num, setNum ] = useState(1);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const [ isError, setIsError ] = useState(false);
+	const history = useHistory();
 
 	const loginApi = async () => {
 		let accessToken;
@@ -42,7 +43,8 @@ function Account() {
 	};
 
 	// CREATE OPPORTUNITY API
-	const opportunityApi = async () => {
+	const opportunityApi = async (payload) => {
+		const { name, email } = payload;
 		setIsLoading(true);
 		setIsError(false);
 		console.count('handleRequestCall');
@@ -56,12 +58,12 @@ function Account() {
 				ApiKey: 'Zapier-7WeYJUbO5GnR'
 			},
 			data: {
-				name: 'Sample Opportunity2',
-				stage_name: 'OpenNegotiation',
+				name: name,
+				stage_name: '',
 				close_date: '42342322242',
 				expected_revenue: 32323,
 				external: 'External-Test1234',
-				email: 'opportunity@revvsales.com'
+				email: email
 			}
 		})
 			.then((res) => {
@@ -158,7 +160,9 @@ function Account() {
 			email,
 			mobile
 		};
-		console.log(obj);
+		opportunityApi(obj);
+		alert('Thanks for reaching out... We will get back to you in 24 hours');
+		history.push('/');
 	};
 
 	return login ? (

@@ -3,18 +3,20 @@ import { AuthContext } from '../Context/ContextProvider';
 import style from './style/style.module.css';
 import styles from './Account.module.css';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function Account() {
 	const context = useContext(AuthContext);
 	const { login, loginUser, registration } = context;
-	const [ request, setRequest ] = useState(false);
-	const [ payment, setPayment ] = useState(false);
-	const [ name, setName ] = useState('');
-	const [ email, setEmail ] = useState('');
-	const [ mobile, setMobile ] = useState('');
-	const [ Num, setNum ] = useState(1);
-	const [ isLoading, setIsLoading ] = useState(false);
-	const [ isError, setIsError ] = useState(false);
+	const [request, setRequest] = useState(false);
+	const [payment, setPayment] = useState(false);
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [mobile, setMobile] = useState('');
+	const [Num, setNum] = useState(1);
+	const [isLoading, setIsLoading] = useState(false);
+	const [isError, setIsError] = useState(false);
+	const history = useHistory();
 
 	const loginApi = async () => {
 		let accessToken;
@@ -41,7 +43,8 @@ function Account() {
 	};
 
 	// CREATE OPPORTUNITY API
-	const opportunityApi = async () => {
+	const opportunityApi = async (payload) => {
+		const { name, email } = payload;
 		setIsLoading(true);
 		setIsError(false);
 		console.count('handleRequestCall');
@@ -55,12 +58,12 @@ function Account() {
 				ApiKey: 'Zapier-7WeYJUbO5GnR'
 			},
 			data: {
-				name: 'Sample Opportunity2',
-				stage_name: 'OpenNegotiation',
+				name: name,
+				stage_name: '',
 				close_date: '42342322242',
 				expected_revenue: 32323,
 				external: 'External-Test1234',
-				email: 'opportunity@revvsales.com'
+				email: email
 			}
 		})
 			.then((res) => {
@@ -157,14 +160,22 @@ function Account() {
 			email,
 			mobile
 		};
-		console.log(obj)
+		opportunityApi(obj);
+		alert('Thanks for reaching out... We will get back to you in 24 hours');
+		history.push('/');
 	};
 
 	return login ? (
 		<div style={{ marginTop: '5%' }}>
+			<h1 style={{ textAlign: 'center' }}>Payment successfull!</h1>
 			<div className={style.account}>
-				<div style={{ width: '60%' }}>
-					<img src="https://as2.ftcdn.net/jpg/02/22/15/15/500_F_222151558_NspEWsIlcoF85J4JtLqvp6atAPwO7mhK.jpg" alt="user" style={{ borderRadius: '50%' }} />
+				<div style={{ width: '30%' }}>
+					<img
+						src="https://as2.ftcdn.net/jpg/02/22/15/15/500_F_222151558_NspEWsIlcoF85J4JtLqvp6atAPwO7mhK.jpg"
+						alt="user"
+						style={{ borderRadius: '50%' }}
+						width="200px"
+					/>
 				</div>
 				<div style={{ width: '30%', marginLeft: '10%', paddingTop: '7%' }}>
 					<h1>{loginUser.name}</h1>
@@ -256,19 +267,21 @@ function Account() {
 						<option value="5">5</option>
 					</select>
 				</label>
+			</div>
+			<div className={styles.requestCallForm}>
+				<h1>You will be paying ₹ 5,000</h1>
 				<label>
-					<br />
 					<button onClick={handleRegister}>Make Payment</button>
 				</label>
 			</div>
 		</div>
 	) : (
-		<div className={styles.actions}>
-			<h1>Seems like you haven't enrolled yet</h1>
-			<button onClick={() => setRequest(true)}>Request a Call</button>
-			<button onClick={() => setPayment(true)}>Enroll Now</button>
-		</div>
-	);
+					<div className={styles.actions}>
+						<h1>Seems like you haven't enrolled yet</h1>
+						<button onClick={() => setRequest(true)}>Request a Call</button>
+						<button onClick={() => setPayment(true)}>Enroll Now</button>
+					</div>
+				);
 }
 
 export default Account;

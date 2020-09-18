@@ -7,7 +7,6 @@ import axios from 'axios';
 function Account() {
 	const context = useContext(AuthContext);
 	const { login, loginUser, registration } = context;
-	console.log(loginUser);
 	const [ request, setRequest ] = useState(false);
 	const [ payment, setPayment ] = useState(false);
 	const [ name, setName ] = useState('');
@@ -158,7 +157,7 @@ function Account() {
 			email,
 			mobile
 		};
-		console.log(obj);
+		console.log(obj)
 	};
 
 	return login ? (

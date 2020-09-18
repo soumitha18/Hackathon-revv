@@ -163,9 +163,15 @@ function Account() {
 
 	return login ? (
 		<div style={{ marginTop: '5%' }}>
+			<h1 style={{ textAlign: 'center' }}>Payment successfull!</h1>
 			<div className={style.account}>
-				<div style={{ width: '60%' }}>
-					<img src="https://as2.ftcdn.net/jpg/02/22/15/15/500_F_222151558_NspEWsIlcoF85J4JtLqvp6atAPwO7mhK.jpg" alt="user" style={{ borderRadius: '50%' }} />
+				<div style={{ width: '30%' }}>
+					<img
+						src="https://as2.ftcdn.net/jpg/02/22/15/15/500_F_222151558_NspEWsIlcoF85J4JtLqvp6atAPwO7mhK.jpg"
+						alt="user"
+						style={{ borderRadius: '50%' }}
+						width="200px"
+					/>
 				</div>
 				<div style={{ width: '30%', marginLeft: '10%', paddingTop: '7%' }}>
 					<h1>{loginUser.name}</h1>
@@ -257,8 +263,10 @@ function Account() {
 						<option value="5">5</option>
 					</select>
 				</label>
+			</div>
+			<div className={styles.requestCallForm}>
+				<h1>You will be paying ₹ 5,000</h1>
 				<label>
-					<br />
 					<button onClick={handleRegister}>Make Payment</button>
 				</label>
 			</div>

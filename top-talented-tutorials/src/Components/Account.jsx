@@ -25,7 +25,7 @@ function Account() {
 			url: 'https://cors-anywhere.herokuapp.com/https://ft15gm1a.revvsales.com/api/v2/auth/initiate-auth',
 			data: {
 				user_email: 'soumithaalpineti@gmail.com',
-				password: 'Schm@123',
+				password: 'Soum@123',
 				org_domain: 'ft15gm1a'
 			},
 			headers: {
